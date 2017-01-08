@@ -1,0 +1,25 @@
+{% extends 'layout/main.html' %}
+{% block title %}Posting {{post['id']}}{% endblock %}
+{% block content %}
+<div class="jumbotron">
+    <div id="wrapper">
+        <div id="fileWrapper" class="file_wrapper">
+            <div id="info"></div>
+            <label for="uploadedFile">{{post['title']}} by {{post['author']}}</label>
+            <input type="file" id="uploadedFile"></input>
+            <p id="fileName" hidden>{{post['filename']}}</p>
+        </div>
+        <div id="visualizer_wrapper">
+            <canvas id='canvas' width="800" height="350"></canvas>
+        </div>
+         <div class="row" style="margin: auto; max-width: 800px;">
+
+            <div class="col-md-1">
+                <button type="button" class="btn btn-default" id="playButton">
+                    <i class="fa fa-play fa-2x" aria-hidden="true"></i>
+                </button>
+            </div>
+         <a href="{{post['url']}}">Source</>
+    </div>
+</div>
+{% endblock %}

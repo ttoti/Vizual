@@ -1,0 +1,11 @@
+{% extends 'layout/main.html' %}
+{% block title %}Post{% endblock %}
+{% block content %}
+<div class="jumbotron">
+  <form method="post" class="form" action="/submit">
+    <h3 class="form-heading">Post Song</h3>
+    {{ form.url(class_ = 'form-control first-input', placeholder = form.url.label.text, required = true, autofocus = true) }}
+    <input type="submit" value="Submit" class="btn btn-primary btn-block" >
+  </form>
+</div>
+{% endblock %}

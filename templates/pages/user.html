@@ -1,0 +1,15 @@
+{% extends 'layout/main.html' %}
+{% block title %}User{% endblock %}
+{% block content %}
+<div class="jumbotron">
+    <h3>Profile: {{user['username']}}</h3>
+</div>
+{%for post in posts%}
+<a href=/post/{{ post['id'] }}>
+<div class="jumbotron">
+    <h3>{{post['title']}} by {{post['author']}}</h3>
+    <a href={{ post['url']}} target="_blank">Source</a>
+</div>
+</a>
+{% endfor %}
+{% endblock %}

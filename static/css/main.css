@@ -1,0 +1,46 @@
+
+/**
+ * @file
+ * Main stylesheet file.
+ */
+
+
+/*****************************************************************************
+ * Main elements
+ ****************************************************************************/
+html {
+  overflow-y: scroll;
+}
+a {
+  cursor: pointer;
+}
+::selection {
+  background: #555;
+  color: #FFF;
+}
+::-moz-selection {
+  background: #555;
+  color: #FFF;
+}
+::-webkit-selection {
+  background: #555;
+  color: #FFF;
+}
+/* Main elements end */
+
+
+/*****************************************************************************
+ * Various other styles
+ ****************************************************************************/
+
+/* Various other styles end */
+#fileWrapper{
+	transition:all 0.5s ease;
+}
+#fileWrapper:hover{
+	opacity: 1!important;
+}
+
+#visualizer_wrapper{
+	text-align: center;
+}

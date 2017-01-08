@@ -1,0 +1,20 @@
+{% extends 'layout/main.html' %}
+{% block title %}Home{% endblock %}
+{% block content %}
+<div class="jumbotron">
+    <div class="jumbotron">
+        <div class="page-header">
+            <h1>Vizual</h1>
+        </div>
+        <p>Vizual is a music visualizer web application that is powered by the following technologies: Python, Flask, SQLite, Bootstrap, HTML5, and Javascript.</p>
+        <p>With this application, one can register, submit songs and view a feed of posts; if you're not interested in signing up, you still have access to the visualizer by clicking the player tab.</p>
+        <p class="lead">A project by Elias Gomez, Tomas Hernandez, Dylan Montgomery and Garred Murphy for CST 205 at California State University, Monterey Bay</p>
+        {% if current_user.is_authenticated == False %}
+        <div class="row">
+            <div class="col-md-6 text-center"><a href="{{url_for('register')}}"<button type="button" class="btn btn-primary btn-lg">Sign Up</button></a></div>
+            <div class="col-md-6 text-center"><a href="{{ url_for('login') }}"><button type="button" class="btn btn-primary btn-lg">Log In</button></a></div>
+        </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

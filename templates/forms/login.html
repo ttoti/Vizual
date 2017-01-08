@@ -1,0 +1,13 @@
+{% extends 'layout/main.html' %}
+{% block title %}Login{% endblock %}
+{% block content %}
+    <div class="jumbotron">
+        <form method="post" class="form">
+            <h3 class="form-heading">Login</h3>
+            {{ form.name(class_ = 'form-control first-input', placeholder = form.name.label.text, required = true, autofocus = true) }}
+            {{ form.password(class_ = 'form-control last-input', placeholder = form.password.label.text, required = true) }}
+            <p class="pull-left"><a href="{{ url_for('register') }}" class="btn">Register</a></p>
+            <input type="submit" value="Log In" class="btn btn-primary btn-lg btn-block">
+        </form>
+    </div>
+{% endblock %}

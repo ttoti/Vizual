@@ -1,0 +1,16 @@
+{% extends 'layout/main.html' %}
+{% block title %}Player{% endblock %}
+{% block content %}
+<div class="jumbotron">
+    <div id="wrapper">
+        <div id="fileWrapper" class="file_wrapper">
+            <div id="info"></div>
+            <label for="uploadedFile">Drag and drop or select a file to play:</label>
+            <input type="file" id="uploadedFile"></input>
+        </div>
+        <div id="visualizer_wrapper">
+            <canvas id='canvas' width="1000" height="300"></canvas>
+        </div>
+    </div>
+</div>
+{% endblock %}
